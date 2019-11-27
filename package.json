@@ -1,0 +1,16 @@
+{
+  "name": "purobot-datasource",
+  "version": "1.0.3",
+  "description": "Data access library",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon run index.js"
+  },
+  "author": "Sylbat",
+  "license": "ISC",
+  "dependencies": {
+    "csv-parser": "^2.3.2",
+    "resources": "file:../resources"
+  }
+}
