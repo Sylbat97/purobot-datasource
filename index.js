@@ -33,13 +33,20 @@ exports.getRandomMatch = function () {
 }
 
 exports.getMatchByWrestler = function (wrestler) {
+    wrestler = wrestler.toLowerCase()
     let matchesIDs = [];
     for (let i = 0; i < wrestlersDictionnary.length; i++) {
-        if(wrestler == wrestlersDictionnary[i].wrestler){
+        if (wrestler == wrestlersDictionnary[i].wrestler) {
+            console.log('FOUND' + wrestler)
             matchesIDs = matchesIDs.concat(wrestlersDictionnary[i].matches.split(' '));
+            matchesIDs = matchesIDs.filter(function (el) {
+                return el != null && el != '';
+            });
         }
     }
+    console.log(matchesIDs);
     let index = matchesIDs[randomIntFromInterval(0, matchesIDs.length)];
+    console.log('index : ' + index);
     return matches[index];
 }
 
