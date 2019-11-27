@@ -1,6 +1,6 @@
 {
   "name": "purobot-datasource",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "Data access library",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,6 @@
   "author": "Sylbat",
   "license": "ISC",
   "dependencies": {
-    "csv-parser": "^2.3.2",
-    "resources": "file:../resources"
+    "csv-parser": "^2.3.2"
   }
 }
