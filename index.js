@@ -45,7 +45,7 @@ exports.getMatchByWrestler = function (wrestler) {
         }
     }
     console.log(matchesIDs);
-    let index = matchesIDs[randomIntFromInterval(0, matchesIDs.length)];
+    let index = matchesIDs[randomIntFromInterval(0, matchesIDs.length - 1)];
     console.log('index : ' + index);
     return matches[index];
 }
