@@ -36,7 +36,7 @@ exports.getMatchByWrestler = function (wrestler) {
     wrestler = wrestler.toLowerCase()
     let matchesIDs = [];
     for (let i = 0; i < wrestlersDictionnary.length; i++) {
-        if (wrestler == wrestlersDictionnary[i].wrestler) {
+        if (wrestlersDictionnary[i].wrestler.includes(wrestler) || wrestler.includes(wrestlersDictionnary[i].wrestler)) {
             console.log('FOUND' + wrestler)
             matchesIDs = matchesIDs.concat(wrestlersDictionnary[i].matches.split(' '));
             matchesIDs = matchesIDs.filter(function (el) {
@@ -47,6 +47,8 @@ exports.getMatchByWrestler = function (wrestler) {
     console.log(matchesIDs);
     let index = matchesIDs[randomIntFromInterval(0, matchesIDs.length - 1)];
     console.log('index : ' + index);
+    console.log('matches ' + matchesIDs.length);
+    console.log(wrestler);
     return matches[index];
 }
 

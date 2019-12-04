@@ -1,6 +1,6 @@
 {
   "name": "purobot-datasource",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Data access library",
   "main": "index.js",
   "scripts": {
